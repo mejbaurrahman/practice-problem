@@ -1,0 +1,29 @@
+class ListNode{
+    constructor(val, next=null){
+        this.val = val;
+        this.next = next;
+    }
+}
+
+var isPalindrome = function(head) {
+    const values=[]
+    let current = head;
+
+    while(current!=null){
+        values.push(current.val);
+        current = current.next;
+    }
+
+    let left = 0;
+    let right = values.length - 1;
+
+    while (left < right) {
+        if (values[left] !== values[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+};
+
