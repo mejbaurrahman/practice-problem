@@ -3,7 +3,7 @@ var wordPattern = function(pattern, s) {
     if(pattern.length !== words.length){
         return false
     }
-
+    
     let patternMap = new Map();
     let wordMap = new Map();
 
